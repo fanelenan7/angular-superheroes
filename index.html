@@ -7,8 +7,22 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
   <script src="app.js"></script>
 </head>
-<body>
-
-  <script src="app.js"></script>
+<body ng-controller="superheroCtrl as vm">
+  <input type="text" ng-model="search" placeholder=" Search"/>
+  <main>
+  <div class="main" ng-repeat="superhero in vm.superheroes | filter:search" ng-class="{ 'overwatchColor' : superhero.affiliation === 'Overwatch (formerly)', 'talonColor' : superhero.affiliation === 'Talon', 'otherColor' : superhero.affiliation !== 'Overwatch (formerly)' && superhero.affiliation !== 'Talon'}">
+    <div class="listing">
+      <h2>{{ $index + 1 }}. {{ superhero.name }}</h2>
+      <p><h4>Real Name:</h4> {{ superhero.realName }}</p>
+      <p><h4>Affiliation:</h4> {{ superhero.affiliation }}</p>
+      <p><h4>Phone Number:</h4> {{ superhero.phoneNumber }}</p>
+      <button ng-click="vm.togglePicture[$index] = !vm.togglePicture[$index]">Show Picture</button>
+       </div>
+       <div class="right">
+         <img ng-src="{{superhero.image}}" ng-show="vm.togglePicture[$index]">
+       </div>
+    </div>
+  </div>
+</main>
 </body>
 </html>

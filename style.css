@@ -1,0 +1,53 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+/*.main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}*/
+/*.listing {
+  background-color: #57A49F;
+  margin: 10px;
+  padding: 10px;
+  width: 400px;
+  text-align: center;*/
+}
+button {
+  width: 50px;
+  height: 30px;
+  border: 0;
+  background-color: white;
+}
+input {
+  margin: 10px;
+  width: 200px;
+  height: 30px;
+}
+img {
+  max-width: 380px;
+  max-height: 380px;
+  margin-top: 15px;
+}
+.overwatchColor {
+  background-color: #FBA013;
+  margin: 10px;
+  padding: 10px;
+  width: 400px;
+  text-align: center;
+}
+.talonColor {
+  background-color: #E13CF9;
+  margin: 10px;
+  padding: 10px;
+  width: 400px;
+  text-align: center;
+}
+.otherColor {
+  background-color: #9AD91A;
+  margin: 10px;
+  padding: 10px;
+  width: 400px;
+  text-align: center;
+}
